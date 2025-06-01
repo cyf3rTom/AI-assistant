@@ -1,0 +1,11 @@
+For sending mail and Fetching data from LLMs we can create a environment file and we can put like : # OpenAI Configuration
+OPENAI_API_KEY_1=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
+# OPENAI_API_KEY_2=your_second_key_here
+# OPENAI_API_KEY_3=your_third_key_here
+
+# Email Configuration
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SENDER_EMAIL=yashpawar.py@gmail.com
+SENDER_PASSWORD=
+Actually I want
