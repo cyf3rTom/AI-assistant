@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css' 
+import axios from 'axios';
 
 const EmailCollector = () => {
   const [email, setEmail] = useState('');
@@ -76,5 +77,28 @@ const EmailCollector = () => {
     </div>
   );
 };
+
+
+/////// sending emaiil to the backend //////////
+useEffect(() => {
+    // Get the stored email when the component loads
+    const storedEmail = localStorage.getItem('userEmail');
+    if (storedEmail) {
+      setEmail(storedEmail);
+      sendEmailToBackend(storedEmail);  // Automatically send it
+    }
+  }, []);
+
+  const sendEmailToBackend = async (emailToSend) => {
+    try {
+      const res = await axios.post('http://localhost:5000/submit-email', {
+        email: emailToSend
+      });
+      setResponse(res.data.message);
+    } catch (err) {
+      console.error("Error sending email:", err);
+      setResponse("Failed to send email.");
+    }
+  };
 
 export default EmailCollector;

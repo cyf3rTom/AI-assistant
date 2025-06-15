@@ -5,6 +5,7 @@ import Page1  from './pages/page1'
 import Home from './pages/home'
 import React from 'react';
 
+
 const Main = () => {
   return (
       <Router>

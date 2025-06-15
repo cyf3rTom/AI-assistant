@@ -14,7 +14,7 @@ def llm_api_key_access_function(debug=0):
     # ]
 
     apiKeys = [
-        os.getenv("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")                                                            
+        os.getenv("")                                                            
         
     ]
 

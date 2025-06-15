@@ -19,8 +19,8 @@ def function_to_plan_next_segment(fileName, startPattern, endPattern, numSegment
         startMatches = re.findall(startPattern, content)
         endMatches = re.findall(endPattern, content)
 
-        if not startMatches or not endMatches:
-            raise ValueError("Error: Data is not in the required format. 'Start:' or 'END:' patterns not found.")
+        # if not startMatches or not endMatches:
+        #     raise ValueError("Error: Data is not in the required format. 'Start:' or 'END:' patterns not found.")
 
         if debug >= 2:
             print(f"AI_006:function_to_plan_next_segment - Found {len(startMatches)} 'Start:' matches")
