@@ -15,7 +15,7 @@ def fetch_data_from_llm(taskPrompt, debug=0):
 
     # llm_api_key = llm_api_key_access_function()
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=api-key-here"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBi4RSjxcSs9yGe51E9pUnjK-C96hfuWiE"
 
     headers = {
         "Content-Type": "application/json"
