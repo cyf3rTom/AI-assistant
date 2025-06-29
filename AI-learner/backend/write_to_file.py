@@ -5,7 +5,7 @@ def write_to_file(fileName, contentList, debug=0):
         print(f"AI_003:write_to_file - Number of lines to write = {len(contentList)}")
 
     try:
-        with open(fileName, 'w') as file:
+        with open(fileName, 'w', encoding='utf-8') as file:
             for index, line in enumerate(contentList):
                 file.write(f"{line}\n")
                 if debug >= 2:

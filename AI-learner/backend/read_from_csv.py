@@ -8,7 +8,7 @@ def read_from_csv(csvFileName, debug=0):
     dataList = []
 
     try:
-        with open(csvFileName, mode='r') as file:
+        with open(csvFileName, mode='r', encoding='utf-8') as file:
             csvReader = csv.DictReader(file)
             headers = csvReader.fieldnames
 
